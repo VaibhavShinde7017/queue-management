@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Hotel_Queue_Management';
+  isLoggedIn = false; // Toggle this value based on login state
+
+  constructor() {
+    // Example: Replace with real login state check
+    this.isLoggedIn = !!localStorage.getItem('userToken');
+  }
 }

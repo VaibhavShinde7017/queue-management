@@ -1,0 +1,10 @@
+.sidebar {
+  background-color: #282c34;
+  color: white;
+  height: 85vh;
+  padding: 15px;
+}
+
+.nav-link {
+  color: white;
+}

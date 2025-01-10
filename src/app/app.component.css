@@ -1,0 +1,13 @@
+.content-wrapper {
+    display: flex;
+}
+
+app-navigation {
+    width: 250px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
