@@ -1,10 +1,44 @@
-.sidebar {
+/* .sidebar {
   background-color: #282c34;
   color: white;
   height: 85vh;
   padding: 15px;
-}
+} */
 
 .nav-link {
   color: white;
 }
+
+.profileLogo{
+  height: 25px;
+  margin-right: 10px;
+}
+
+.sidenav-container {
+  height: 80vh;
+}
+
+mat-sidenav {
+  width: 200px;
+}
+
+/* mat-sidenav-content {
+  padding: 16px;
+  background-color: #f8f9fa;
+} */
+
+/* mat-toolbar {
+  font-size: 18px;
+  font-weight: bold;
+} */
+
+
+/* .mat-active {
+  background-color: #e0f7fa; 
+  font-weight: bold;
+  color: red;
+}
+
+.mat-active img{
+  background-color: red;
+} */

@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --deployUrl=https://visa-uat.vfsglobal.com/_angular/ --crossOrigin=anonymous",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

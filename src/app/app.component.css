@@ -1,13 +1,14 @@
-.content-wrapper {
+/* .content-wrapper {
     display: flex;
-}
+} */
 
-app-navigation {
+/* app-navigation {
     width: 250px;
-}
+} */
 
 .main-content {
+    height: 80vh;
     flex-grow: 1;
-    padding: 20px;
+    padding: 10px;
     background-color: #f8f9fa;
 }

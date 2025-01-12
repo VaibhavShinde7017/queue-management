@@ -16,6 +16,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './modules/shared/shared.module';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { MyProfileComponent } from './components/my-profile/my-profile.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { SharedModule } from './modules/shared/shared.module';
     StaffMasterComponent,
     CustomerMasterComponent,
     QueueManagementComponent,
-    NavigationComponent
+    NavigationComponent,
+    AboutUsComponent,
+    MyProfileComponent
   ],
   imports: [
     BrowserModule,

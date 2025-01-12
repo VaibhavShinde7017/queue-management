@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
   isLoggedIn = false; // Toggle this value based on login state
 
   constructor() {
@@ -15,5 +16,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  logout() {
+    throw new Error('Method not implemented.');
+ }
 }

@@ -11,6 +11,10 @@
   height: 50px;
 }
 
+.profileLogo{
+  height: 40px;
+}
+
 nav ul {
   list-style: none;
   display: flex;

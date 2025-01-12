@@ -1,17 +1,31 @@
-<nav class="sidebar">
-    <ul class="nav flex-column">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/profile" routerLinkActive="active">Profile</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/settings" routerLinkActive="active">Settings</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/logout" routerLinkActive="active">Logout</a>
-      </li>
-    </ul>
-  </nav>
-  
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" opened>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/dashboard" routerLinkActive="mat-active"
+        [routerLinkActiveOptions]="{ exact: true }">
+        <img class="profileLogo" src="./../../../assets/images/dashboard.webp" alt="My Dashbaord" />
+        <span>Dashboard</span>
+      </a>
+      <a mat-list-item routerLink="/queue" routerLinkActive="mat-active" [routerLinkActiveOptions]="{ exact: true }">
+        <img class="profileLogo" src="./../../../assets/images/queue-menu.webp" alt="My Dashbaord" />
+        <span>Queue</span>
+      </a>
+      <a mat-list-item routerLink="/customers" routerLinkActive="mat-active"
+        [routerLinkActiveOptions]="{ exact: true }">
+        <img class="profileLogo" src="./../../../assets/images/customer-menu.webp" alt="My Dashbaord" />
+        <span>Customers</span>
+      </a>
+      <a mat-list-item routerLink="/staff">
+        <img class="profileLogo" src="./../../../assets/images/staff-menu.webp" alt="My Dashbaord" />
+        <span>Staff</span>
+      </a>
+      <a mat-list-item routerLink="/about-us">
+        <img class="profileLogo" src="./../../../assets/images/about-us-menu.webp" alt="My Dashbaord" />
+        <span>About us</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

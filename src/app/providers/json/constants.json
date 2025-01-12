@@ -1,0 +1,11 @@
+{
+    "routes": {
+        "login":"login",
+        "dashboard":"dashboard",
+        "queueManagement":"queue",
+        "customerMaster":"customers",
+        "staffMaster":"staff",
+        "aboutUs":"about-us",
+        "myProfile":"my-profile"
+    }
+}
