@@ -1,0 +1,25 @@
+.container {
+    margin: 20px auto;
+  }
+  
+  .mat-elevation-z8 {
+    margin-top: 20px;
+  }
+  
+  .mat-dialog {
+    width: 400px;
+  }
+  
+  .w-100 {
+    width: 100%;
+  }
+  
+  .mat-dialog-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .mat-dialog-actions {
+    margin-top: 20px;
+  }
+  

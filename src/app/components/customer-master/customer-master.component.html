@@ -1,1 +1,91 @@
-<p>customer-master works!</p>
+<div class="container mt-4">
+    <!-- Page Header -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h1 class="fs-4">Customer Master</h1>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="openAddCustomerModal()"
+      >
+        + Add Customer
+      </button>
+    </div>
+  
+    <!-- Table for Customers -->
+    <mat-card>
+      <table mat-table [dataSource]="customers" class="mat-elevation-z8 mat-table">
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let customer"> {{ customer.name }} </td>
+        </ng-container>
+  
+        <!-- Contact Column -->
+        <ng-container matColumnDef="contact">
+          <th mat-header-cell *matHeaderCellDef> Contact </th>
+          <td mat-cell *matCellDef="let customer"> {{ customer.contact }} </td>
+        </ng-container>
+  
+        <!-- Address Column -->
+        <ng-container matColumnDef="address">
+          <th mat-header-cell *matHeaderCellDef> Address </th>
+          <td mat-cell *matCellDef="let customer"> {{ customer.address }} </td>
+        </ng-container>
+  
+        <!-- Actions Column -->
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef> Actions </th>
+          <td mat-cell *matCellDef="let customer">
+            <button mat-icon-button color="warn" (click)="deleteCustomer(customer)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </mat-card>
+  </div>
+  
+  <mat-dialog *ngIf="isModalOpen">
+    <h2 mat-dialog-title>Add Customer</h2>
+    <mat-dialog-content>
+      <form [formGroup]="addCustomerForm">
+        <!-- Name Input -->
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Enter name" formControlName="name" />
+        </mat-form-field>
+  
+        <!-- Contact Input -->
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Contact</mat-label>
+          <input matInput placeholder="Enter contact" formControlName="contact" />
+        </mat-form-field>
+  
+        <!-- Address Input -->
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Address</mat-label>
+          <textarea
+            matInput
+            placeholder="Enter address"
+            formControlName="address"
+          ></textarea>
+        </mat-form-field>
+      </form>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close (click)="closeModal()">Cancel</button>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="addCustomer()"
+        [disabled]="!addCustomerForm.valid"
+      >
+        Save
+      </button>
+    </mat-dialog-actions>
+  </mat-dialog>
+  
+  
