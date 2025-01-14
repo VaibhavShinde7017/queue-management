@@ -9,6 +9,7 @@ export class CustomerMasterComponent implements OnInit {
   customers = [
     { name: 'John Doe', contact: '1234567890', address: '123 Main St' },
     { name: 'Jane Smith', contact: '9876543210', address: '456 Elm St' },
+    { name: 'Mark Johnson', contact: '5432167890', address: '789 Pine St' },
   ];
   displayedColumns: string[] = ['name', 'contact', 'address', 'actions'];
 
@@ -43,12 +44,17 @@ export class CustomerMasterComponent implements OnInit {
     }
   }
 
-  // Delete customer
-  deleteCustomer(customer: any) {
-    this.customers = this.customers.filter((c) => c !== customer);
-  }
 
   ngOnInit(): void {
   }
+  editCustomer(customer: any) {
+    // Logic to edit customer details
+  }
 
+  deleteCustomer(customer: any) {
+    const confirmed = confirm(`Are you sure you want to delete ${customer.name}?`);
+    if (confirmed) {
+      this.customers = this.customers.filter((c) => c !== customer);
+    }
+  }
 }
