@@ -1,6 +1,7 @@
 /* Bordered form */
 form {
 	border: 3px solid #f1f1f1;
+	width: 500px;
   }
   
   /* Full-width inputs */
@@ -39,18 +40,20 @@ form {
   /* Center the avatar image inside this container */
   .imgcontainer {
 	text-align: center;
-	margin: 24px 0 12px 0;
+	margin: 15px 0 12px 0;
   }
   
   /* Avatar image */
   img.avatar {
-	width: 40%;
+	width: 10%;
 	border-radius: 50%;
   }
   
   /* Add padding to containers */
   .container {
 	padding: 16px;
+	width: auto;
+	
   }
   
   /* The "Forgot password" text */
