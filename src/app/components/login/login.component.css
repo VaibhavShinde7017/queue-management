@@ -16,7 +16,7 @@ form {
   
   /* Set a style for all buttons */
   button {
-	background-color: #04AA6D;
+	background-color: #20232a;
 	color: white;
 	padding: 14px 20px;
 	margin: 8px 0;
@@ -62,8 +62,19 @@ form {
 	padding-top: 16px;
   }
   
+  .passwordContainer{
+	background-color:#f1f1f1; 
+	margin: 0px 0px 10px 0px
+  }
+  .resetPsw{
+	padding: 10px 0px;
+  }
+
+  .forgetPsw{
+	float: right;
+  }
   /* Change styles for span and cancel button on extra small screens */
-  @media screen and (max-width: 300px) {
+  /* @media screen and (max-width: 300px) {
 	span.psw {
 	  display: block;
 	  float: none;
@@ -71,4 +82,4 @@ form {
 	.cancelbtn {
 	  width: 100%;
 	}
-  }
+  } */

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -9,7 +9,7 @@ export class HeaderComponent implements OnInit {
 
   isLoggedIn = false; // Toggle this value based on login state
 
-  constructor() {
+  constructor(private router:Router) {
     // Example: Replace with real login state check
     this.isLoggedIn = !!localStorage.getItem('userToken');
   }
@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
   logout() {
-    throw new Error('Method not implemented.');
- }
+    localStorage.removeItem('userToken'); // Remove token
+    this.router.navigate(['/login']); // Redirect to login
+  }
 }

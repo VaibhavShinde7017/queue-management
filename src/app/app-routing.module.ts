@@ -9,15 +9,17 @@ import { CustomerMasterComponent } from './components/customer-master/customer-m
 import { StaffMasterComponent } from './components/staff-master/staff-master.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
+import { AuthGuard } from './utilities/auth.guard';
 
 const routes: Routes = [
   {path: '', component:LoginComponent},
-  {path: ROUTE_NAMES.dashboard, component:DashboardComponent},
-  {path: ROUTE_NAMES.queueManagement, component:QueueManagementComponent},
-  {path: ROUTE_NAMES.customerMaster, component:CustomerMasterComponent},
-  {path: ROUTE_NAMES.staffMaster, component:StaffMasterComponent},
-  {path: ROUTE_NAMES.aboutUs, component:AboutUsComponent},
-  {path: ROUTE_NAMES.myProfile, component:MyProfileComponent}
+  {path: ROUTE_NAMES.login, component:LoginComponent},
+  {path: ROUTE_NAMES.dashboard, component:DashboardComponent,canActivate: [AuthGuard]},
+  {path: ROUTE_NAMES.queueManagement, component:QueueManagementComponent,canActivate: [AuthGuard]},
+  {path: ROUTE_NAMES.customerMaster, component:CustomerMasterComponent,canActivate: [AuthGuard]},
+  {path: ROUTE_NAMES.staffMaster, component:StaffMasterComponent,canActivate: [AuthGuard]},
+  {path: ROUTE_NAMES.aboutUs, component:AboutUsComponent,canActivate: [AuthGuard]},
+  {path: ROUTE_NAMES.myProfile, component:MyProfileComponent,canActivate: [AuthGuard]}
 ] 
 
 @NgModule({
