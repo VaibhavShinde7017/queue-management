@@ -7,13 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  isLoggedIn = false; // Toggle this value based on login state
+  constructor() { }
 
-  constructor() {
-    this.isLoggedIn = !!localStorage.getItem('userToken');
-   }
+  ngOnInit(): void { }
 
-  ngOnInit(): void {
+  get isLoggedIn(): boolean {
+    return localStorage.getItem('userToken') ? true : false;
   }
 
 }

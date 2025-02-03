@@ -7,17 +7,16 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  isLoggedIn = false; // Toggle this value based on login state
+  constructor(private router: Router) { }
 
-  constructor(private router:Router) {
-    // Example: Replace with real login state check
-    this.isLoggedIn = !!localStorage.getItem('userToken');
-  }
+  ngOnInit(): void { }
 
-  ngOnInit(): void {
-  }
   logout() {
-    localStorage.removeItem('userToken'); // Remove token
-    this.router.navigate(['/login']); // Redirect to login
+    localStorage.removeItem('userToken');
+    this.router.navigate(['/login']);
+  }
+
+  get isLoggedIn(): boolean {
+    return localStorage.getItem('userToken') ? true : false;
   }
 }

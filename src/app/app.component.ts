@@ -7,15 +7,13 @@ import { Component,OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'Hotel_Queue_Management';
-  isLoggedIn = false; // Toggle this value based on login state
 
-  constructor() {
-    // Example: Replace with real login state check
-    // this.isLoggedIn = !!localStorage.getItem('userToken');
-  }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.isLoggedIn = !!localStorage.getItem('userToken');
+  ngOnInit(): void { }
+
+  get isLoggedIn(): boolean {
+    return localStorage.getItem('userToken') ? true : false;
   }
 
 }
