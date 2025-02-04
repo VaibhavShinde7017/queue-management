@@ -3,47 +3,13 @@
   padding: 5px 10px;
 }
 
-#customers {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  padding: 5px 5px 5px 5px;
-}
-
-#customers td,
-#customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#customers tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-#customers tr:hover {
-  background-color: #ddd;
-}
-
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #282c34;
-  color: white;
-}
-
+ /* Add spacing between cards */
 .first-card {
   padding: 10px 10px 5px 10px;
   margin: 0px 0px 5px 0px;
-  /* Add spacing between cards */
 }
 
-.second-card {
-  padding: 10px 20px 20px 20px;
-  /* margin: 0px 0px 5px 0px;  */
-}
-
-mat-card-header {
+.mat-card-header {
   position: relative;
 }
 
@@ -57,4 +23,30 @@ mat-card-header {
 .button-container button {
   background-color: #282c34;
   color: #fff;
+}
+
+.second-card {
+ padding: 15px;
+}
+
+/* Make sure the table is scrollable */
+.table-responsive {
+ overflow-x: auto;
+ max-width: 100%;
+}
+
+/* Prevent text from breaking weirdly */
+th, td {
+ white-space: nowrap;
+}
+
+/* Reduce padding on small screens */
+@media (max-width: 768px) {
+ .table {
+   font-size: 14px;
+ }
+ .btn {
+   padding: 2px 6px;
+   font-size: 12px;
+ }
 }

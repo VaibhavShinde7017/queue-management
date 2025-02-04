@@ -8,54 +8,82 @@
   </mat-card-header>
 </mat-card>
 
+
 <mat-card appearance="outlined" class="second-card">
   <mat-card-actions>
-    <div class="">
-      <table id="customers">
-        <tr>
-          <th>Name </th>
-          <th>Contact</th>
-          <th>Address</th>
-          <th>Information</th>
-          <th>Action</th>
-        </tr>
-        <tr *ngFor="let staff of staffs">
-          <td>{{ staff.name }}</td>
-          <td>{{ staff.contact }}</td>
-          <td>{{ staff.address }}</td>
-          <td>
-            <button class="btn btn-success btn-sm me-2" (click)="editStaff(staff)">Edit</button>
-            <button class="btn btn-danger btn-sm" (click)="deleteStaff(staff)">Delete</button>
-          </td>
-        </tr>
-        <tr>
-          <td>Berglunds snabbköp</td>
-          <td>Christina Berglund</td>
-          <td>Sweden</td>
-          <td>Maria Anders</td>
-          <td>Edit Delete</td>
-        </tr>
-        <tr>
-          <td>Centro comercial Moctezuma</td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-          <td>Roland Mendel</td>
-          <td>Edit Delete</td>
-        </tr>
-        <tr>
-          <td>Ernst Handel</td>
-          <td>Roland Mendel</td>
-          <td>Austria</td>
-          <td>Francisco Chang</td>
-          <td>Edit Delete</td>
-        </tr>
-        <tr>
-          <td>Island Trading</td>
-          <td>Helen Bennett</td>
-          <td>UK</td>
-          <td>Philip Cramer</td>
-          <td>Edit Delete</td>
-        </tr>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>Name </th>
+            <th>Contact</th>
+            <th>Address</th>
+            <th>Information</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+            <td>Maria Anders</td>
+            <td class="btnClass">
+              <button class="btn btn-sm btn-primary me-2">Edit</button>
+              <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Berglunds snabbköp</td>
+            <td>Christina Berglund</td>
+            <td>Sweden</td>
+            <td>Maria Anders</td>
+            <td>
+              <button class="btn btn-sm btn-primary me-2">Edit</button>
+              <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+            <td>Roland Mendel</td>
+            <td>
+              <button class="btn btn-sm btn-primary me-2">Edit</button>
+              <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+            <td>Roland Mendel</td>
+            <td>
+              <button class="btn btn-sm btn-primary me-2">Edit</button>
+              <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+            <td>Roland Mendel</td>
+            <td>
+              <button class="btn btn-sm btn-primary me-2">Edit</button>
+              <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+            <td>Roland Mendel</td>
+            <td>
+              <button class="btn btn-sm btn-primary me-2">Edit</button>
+              <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+          </tr>
+        </tbody>
       </table>
     </div>
   </mat-card-actions>
