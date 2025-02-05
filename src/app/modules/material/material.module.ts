@@ -13,6 +13,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+
+import { MatInputModule } from '@angular/material/input';
+
 const module =  [
   CommonModule,
   MatButtonModule,
@@ -23,7 +26,8 @@ const module =  [
   MatListModule,
   MatCardModule,
   MatFormFieldModule,
-  MatDialogModule,MatTableModule,MatPaginatorModule,MatSortModule
+  MatDialogModule,MatTableModule,MatPaginatorModule,MatSortModule,
+  MatInputModule
 ]
 
 @NgModule({
